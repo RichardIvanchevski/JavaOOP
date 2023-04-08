@@ -18,8 +18,4 @@ public abstract class BaseSupplement implements Supplement{
     public double getPrice() {
         return price;
     }
-
-    public final void getAsd(){
-
-    }
 }
