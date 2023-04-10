@@ -107,7 +107,7 @@ public class ControllerImpl implements Controller {
             }
         }
 
-        assert service != null;
+        
         if (service.getClass().getSimpleName().equals("MainService") && robotType.equals("MaleRobot")) {
                 service.addRobot(robot);
             } else if (service.getClass().getSimpleName().equals("SecondaryService") && robotType.equals("FemaleRobot")) {
@@ -129,7 +129,7 @@ public class ControllerImpl implements Controller {
                 service = currentService;
             }
         }
-        assert service != null;
+       
         for (Robot robot : service.getRobots()) {
             robot.eating();
             count++;
@@ -149,7 +149,7 @@ public class ControllerImpl implements Controller {
             }
         }
 
-        assert service != null;
+      
         for (Robot robot : service.getRobots()) {
             totalSum += robot.getPrice();
         }
@@ -170,7 +170,7 @@ public class ControllerImpl implements Controller {
             sb.append(String.format("%s %s", service.getName(), service.getClass().getSimpleName())).append(System.lineSeparator())
                     .append("Robots: ");
 
-            if (service.getRobots() != null || !service.getRobots().isEmpty()) {
+            if (service.getRobots() != null && !service.getRobots().isEmpty()) {
                 for (Robot robot : service.getRobots()) {
                     sb.append(String.format("%s ",robot.getName()));
                 }
